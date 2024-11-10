@@ -3,6 +3,13 @@
 
 using namespace std;
 
+void printText( const char *text ){
+    init_pair(3, COLOR_CYAN, COLOR_BLACK);
+    attron(COLOR_PAIR(3));
+    printw("%s",text);
+    refresh();
+}
+
 int main(){
     initscr();
 
@@ -41,7 +48,7 @@ int main(){
     napms(2000);
     
     clear();
-    
+    printText("Juanito comio mas de lo que debia");
     move(6, 5);
     printw("Página 3 de 3");
     refresh();
